@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frank Draws — Pages</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+	*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+	:root {
+	  --cream:     #f5f2ec;
+	  --ink:       #2c2920;
+	  --muted:     #7a7368;
+	  --rule:      #c9c3b8;
+	  --accent:    #8a6f52;
+	  --hover-bg:  #ede9e2;
+	}
+
+	body {
+	  background-color: var(--cream);
+	  color: var(--ink);
+	  font-family: 'Jost', sans-serif;
+	  font-weight: 300;
+	  min-height: 100vh;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  padding: 0 1.5rem;
+	}
+
+	/* ── Header ── */
+	header {
+	  width: 100%;
+	  max-width: 640px;
+	  padding: 5rem 0 2.5rem;
+	  text-align: center;
+	}
+
+	.site-name {
+	  font-family: 'Cormorant Garamond', serif;
+	  font-weight: 300;
+	  font-size: clamp(2rem, 5vw, 3rem);
+	  letter-spacing: 0.12em;
+	  text-transform: uppercase;
+	  color: var(--ink);
+	  line-height: 1;
+	}
+
+	.site-name em {
+	  font-style: italic;
+	  font-weight: 400;
+	  color: var(--accent);
+	}
+
+	.tagline {
+	  margin-top: 0.75rem;
+	  font-size: 0.8rem;
+	  letter-spacing: 0.25em;
+	  text-transform: uppercase;
+	  color: var(--muted);
+	}
+
+	/* ── Ornamental rule ── */
+	.ornament {
+	  display: flex;
+	  align-items: center;
+	  gap: 1rem;
+	  margin: 2rem auto;
+	  max-width: 640px;
+	}
+
+	.ornament::before,
+	.ornament::after {
+	  content: '';
+	  flex: 1;
+	  height: 0.5px;
+	  background: var(--rule);
+	}
+
+	.ornament-mark {
+	  width: 6px;
+	  height: 6px;
+	  border: 0.5px solid var(--rule);
+	  transform: rotate(45deg);
+	  flex-shrink: 0;
+	}
+
+	/* ── Entry list ── */
+	main {
+	  width: 100%;
+	  max-width: 640px;
+	}
+
+	.entries {
+	  list-style: none;
+	  display: flex;
+	  flex-direction: column;
+	  gap: 0;
+	}
+
+	.entry {
+	  border-top: 0.5px solid var(--rule);
+	}
+
+	.entry:last-child {
+	  border-bottom: 0.5px solid var(--rule);
+	}
+
+	.entry a {
+	  display: flex;
+	  align-items: baseline;
+	  justify-content: space-between;
+	  gap: 1.5rem;
+	  padding: 1.25rem 0;
+	  text-decoration: none;
+	  color: inherit;
+	  transition: background 0.15s ease;
+	  border-radius: 2px;
+	}
+
+	.entry a:hover {
+	  background: var(--hover-bg);
+	  padding-left: 0.75rem;
+	  padding-right: 0.75rem;
+	  margin-left: -0.75rem;
+	  margin-right: -0.75rem;
+	}
+
+	.entry-title {
+	  font-family: 'Cormorant Garamond', serif;
+	  font-weight: 400;
+	  font-size: 1.3rem;
+	  line-height: 1.3;
+	  color: var(--ink);
+	}
+
+	.entry-arrow {
+	  font-family: 'Jost', sans-serif;
+	  font-size: 0.75rem;
+	  letter-spacing: 0.1em;
+	  color: var(--muted);
+	  white-space: nowrap;
+	  flex-shrink: 0;
+	  transition: color 0.15s ease, transform 0.15s ease;
+	}
+
+	.entry a:hover .entry-arrow {
+	  color: var(--accent);
+	  transform: translateX(3px);
+	}
+
+	/* ── Footer ── */
+	footer {
+	  width: 100%;
+	  max-width: 640px;
+	  padding: 3rem 0 4rem;
+	  text-align: center;
+	}
+
+	.footer-mark {
+	  font-size: 0.7rem;
+	  letter-spacing: 0.2em;
+	  text-transform: uppercase;
+	  color: var(--rule);
+	}
+  </style>
+</head>
+<body>
+
+  <header>
+	<p class="site-name">Frank<em>Draws</em></p>
+	<p class="tagline">A collection of wisdom pages</p>
+  </header>
+
+  <div class="ornament"><div class="ornament-mark"></div></div>
+
+  <main>
+	<ul class="entries">
+
+	  <li class="entry">
+		<a href="https://frankdraws.github.io/do-hard-things/" target="_blank" rel="noopener">
+		  <span class="entry-title">The Ability to Do Hard Things</span>
+		  <span class="entry-arrow">Visit →</span>
+		</a>
+	  </li>
+
+	  <li class="entry">
+		<a href="https://frankdraws.github.io/tolerating-process/" target="_blank" rel="noopener">
+		  <span class="entry-title">Tolerating Process</span>
+		  <span class="entry-arrow">Visit →</span>
+		</a>
+	  </li>
+
+	  <!-- Add new entries above this line -->
+
+	</ul>
+  </main>
+
+  <div class="ornament"><div class="ornament-mark"></div></div>
+
+  <footer>
+	<p class="footer-mark">frankdraws.github.io</p>
+  </footer>
+
+</body>
+</html>
